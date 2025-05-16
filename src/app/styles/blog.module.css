@@ -1,0 +1,27 @@
+.container {
+  /* Wrapper for the entire page */
+}
+.main {
+  background-image: url('/birds.png');
+  background-repeat: repeat;
+  padding: 40px 0;
+}
+.blogSection {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.blogSection h1 {
+  text-align: center;
+  background-color: #FFD700; /* Yellow */
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blogPosts {
+  /* Container for blog posts */
+}
