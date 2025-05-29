@@ -19,77 +19,156 @@ export default function AboutUs() {
 
       <main className="flex-grow bg-white text-gray-800">
         {/* Hero Section */}
-        <section className="bg-yellow-400 py-10 text-center">
-          <h1 className="text-4xl font-extrabold uppercase tracking-wide">About Us</h1>
-          <p className="mt-2 text-lg font-medium text-gray-700">
-            Empowering through Education and Holistic Growth
-          </p>
-        </section>
+        <section className="bg-yellow-400 py-16 text-center relative overflow-hidden">
+  <div className="max-w-3xl mx-auto z-10 relative px-4">
+    <h1 className="text-5xl font-extrabold uppercase tracking-wide text-amber-900 drop-shadow">
+      Who We Are
+    </h1>
+    <p className="mt-4 text-xl font-medium text-gray-800">
+      Empowering Dreams. Uplifting Futures.
+    </p>
+    <p className="mt-2 text-lg text-gray-700">
+      At MITTALIS Research India, we believe that every child deserves the opportunity to learn, grow, and thrive.
+    </p>
+  </div>
+  <div className="absolute inset-0 opacity-20 bg-[url('/INT7.jpg')] bg-cover bg-center"></div>
+</section>
 
-        {/* About Content */}
-<section className="container mx-auto px-4 py-12 max-w-4xl">
-  <div className="space-y-8 text-lg leading-relaxed">
-    <p>
-      <strong>MITTALIS Research India</strong> is a purpose-driven organization committed to transforming the lives of underserved children across India through mindful, inclusive, and sustainable interventions. Founded on the principle of <strong>Mindful Intervention for Tangible Transformation and Lifelong Impact for Sustainability</strong>, MITTALIS works at the intersection of education, research, and rehabilitation to create meaningful and lasting change. With a deep-rooted belief in the potential of every child, the organization’s efforts are centered on empowering young minds to dream big, rise above their circumstances, and build a brighter future.
-    </p>
-    <p>
-      Our work focuses on three interconnected pillars—<strong>Education, Upskilling, and Research</strong>. MITTALIS provides access to quality learning resources, life skills training, and creative arts programs to help children grow into capable, confident individuals. Through our <strong>Knowing India</strong> initiative, we document traditional knowledge systems and explore the challenges faced by marginalized communities, offering sustainable solutions rooted in cultural understanding. We especially support tribal children, orphans, children of migrant workers, and children from other disadvantaged sections who face multiple barriers to education and well-being.
-    </p>
-    <p>
-      At MITTALIS, we believe true change goes beyond temporary assistance. Our work is anchored in sustainable development and cultural preservation, ensuring that each intervention contributes to a future that is equitable, inclusive, and enduring.
-    </p>
-    <p>
-      With current initiatives in <strong>Kerala</strong> and <strong>Bengaluru</strong>, MITTALIS Research India continues to evolve as a community-rooted organization driven by compassion and commitment. Through every step, we remain focused on our core mission—to <strong>Educate, Engage, and Enrich</strong> the lives of children, nurturing a generation that carries forward both knowledge and hope.
-    </p>   
+
+     <section className="bg-white py-20">
+  <div className="container mx-auto px-6 max-w-6xl">
+       <div className="grid md:grid-cols-2 gap-12 text-lg text-gray-800 leading-relaxed">
+      <div>
+        <h3 className="text-2xl font-semibold text-yellow-500 mb-2">Our Philosophy</h3>
+        <p>
+          MITTALIS stands for <strong>Mindful Intervention for Tangible Transformation and Lifelong Impact for Sustainability</strong>. Our initiatives are rooted in the belief that true change comes from sustained, thoughtful engagement.
+        </p>
+        <p className="mt-4">
+          We don’t just offer aid—we work to restore dignity and opportunity to children from
+          marginalized communities across India.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-yellow-500 mb-2">Our Focus</h3>
+        <p>
+          Operating at the intersection of <strong>education, research, and rehabilitation</strong>,
+          we serve children from tribal backgrounds, migrant families, orphanages, and rural settlements.
+        </p>
+        <p className="mt-4">
+          From early learning to life skills and mental wellness, our holistic approach empowers children
+          to thrive and lead with confidence.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-yellow-500 mb-2">Cultural Connection</h3>
+        <p>
+          Through our <em><strong>Knowing India</strong></em> initiative, we celebrate and safeguard
+          indigenous knowledge systems while addressing modern social challenges with cultural sensitivity.
+        </p>
+        <p className="mt-4">
+          We believe identity is power—and every child deserves to see their heritage valued and upheld.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-yellow-500 mb-2">Where We Work</h3>
+        <p>
+          Our on-ground programs currently operate in <strong>Kerala</strong> and <strong>Bengaluru</strong>,
+          led by a growing network of educators, researchers, and volunteers dedicated to uplifting communities.
+        </p>
+        <p className="mt-4">
+          We’re building a future that is inclusive, resilient, and rooted in hope.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-16 text-center">
+      <p className="text-xl font-semibold text-gray-800">
+        Join us in our mission to <span className="text-yellow-500">Educate, Engage, and Enrich</span>.
+      </p>
+      <p className="mt-2 text-gray-600">
+        Your support can help shape a generation of changemakers.
+      </p>
+    </div>
   </div>
 </section>
 
 
-        {/* Mission Section */}
-        <Section title="Our Mission" bg="bg-yellow-100">
-          <p className="text-xl font-medium text-center">Educate, Engage, Enrich!</p>
-        </Section>
+
+
+      {/* Mission Section */}
+<Section title="Our Mission" bg="bg-yellow-100">
+  <div className="max-w-4xl mx-auto text-center">
+    <p className="text-2xl font-semibold text-amber-900 mb-4">
+      Educate. Engage. Enrich.
+    </p>
+    <p className="text-lg text-gray-700 leading-relaxed">
+      At MITTALIS Research India, our mission is to empower children from underserved communities through
+      access to quality education, emotional well-being, and cultural dignity. We strive to create safe
+      learning spaces, foster curiosity, and build a foundation for lifelong growth.
+    </p>
+  </div>
+</Section>
 
         {/* Vision Section */}
-        <Section title="Our Vision" bg="bg-white">
-          <p className="text-lg text-center max-w-3xl mx-auto">
-           To foster the holistic development of children from marginalized communities through education, skill-building, environmental awareness, cultural preservation, and research.
-          </p>
-        </Section>
+<Section title="Our Vision" bg="bg-white">
+  <div className="max-w-4xl mx-auto text-center px-4">
+    <p className="text-2xl font-semibold text-amber-900 mb-4">
+      A Future Rooted in Compassion and Possibility
+    </p>
+    <p className="text-lg text-gray-700 leading-relaxed">
+      To foster the holistic development of children from marginalized communities through
+      <span className="font-medium text-yellow-600"> education</span>,
+      <span className="font-medium text-yellow-600"> skill-building</span>,
+      <span className="font-medium text-yellow-600"> environmental awareness</span>,
+      <span className="font-medium text-yellow-600"> cultural preservation</span>,
+      and <span className="font-medium text-yellow-600">research</span>.
+    </p>
+  </div>
+</Section>
 
-        {/* Glimpse Section */}
-        <Section title="A Glimpse into MITTALIS 2024" bg="bg-gray-50">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                src: '/MIG4.jpeg',
-                alt: 'Awareness program on cleanliness and hygiene for the children of migrant workers in Hegdenagar, Bengaluru.',
-              },
-              {
-                src: '/ORP 2.jpeg',
-                alt: 'Remedial classes for children in Budigere, Bengaluru',
-              },
-              {
-                src: '/MC6.jpeg',
-                alt: 'Session on mental, emotional & physical well-being  by Ayurveda physicians, Dr Arjun Chand and Dr Arya Krishnan at St. Gregorious English Medium School, Attappadi, a major tribal belt in Kerala.',
-              },
-              {
-                src: '/INT6.jpg',
-                alt: 'MA English students at Kristu Jayanti College, Bengaluru, conducting learning sessions for kids at Modala Shala Ananda Sagara Charitable Trust, Bengaluru as a part of their internshipp.',
 
-              },
-              {
-                src: '/MC3.jpeg',
-                alt: 'Medical Camp in Mukkali and Sholayur regions of Attappadi.',
-              },
-            ].map(({ src, alt }, idx) => (
-              <div key={idx} className="rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <img src={src} alt={alt} className="w-full h-64 object-cover" />
-                <p className="text-center text-sm mt-2 px-2 pb-4">{alt}</p>
-              </div>
-            ))}
-          </div>
-        </Section>
+{/* Glimpse Section */}
+<Section title="A Glimpse into MITTALIS 2024–25" bg="bg-yellow-50">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {[
+      {
+        src: '/MIG4.jpeg',
+        alt: 'Cleanliness and hygiene awareness for children of migrant workers in Hegdenagar, Bengaluru.',
+      },
+      {
+        src: '/BUD4.jpeg',
+        alt: 'Remedial classes for children in Budigere, Bengaluru.',
+      },
+      {
+        src: '/GEMS4.jpeg',
+        alt: 'Well-being session by Ayurveda doctors at St. Gregorious English Medium School, Attappadi.',
+      },
+      {
+        src: '/INT6.jpg',
+        alt: 'MA English students at Kristu Jayanti College conducting sessions for children in Bengaluru.',
+      },
+      {
+        src: '/MC6.jpeg',
+        alt: 'Medical Camp in Mukkali and Sholayur regions of Attappadi.',
+      },
+    ].map(({ src, alt }, idx) => (
+      <div
+        key={idx}
+        className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-transform transform hover:scale-[1.01] bg-white"
+      >
+        <img src={src} alt={alt} className="w-full h-60 object-cover" />
+        <div className="p-4">
+          <p className="text-sm font-semibold text-gray-700 text-center">{alt}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
+
+
 
         {/* Call to Action */}
         <Section title="Join Our Cause" bg="bg-yellow-100">

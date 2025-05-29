@@ -38,7 +38,7 @@ export default function GetInTouch() {
       <main className="bg-white min-h-screen">
         {/* Hero Section */}
         <section className="bg-yellow-400 text-center py-10">
-          <h1 className="text-gray-800 text-4xl font-extrabold uppercase tracking-wide">
+          <h1 className=" text-amber-900 text-4xl font-extrabold uppercase tracking-wide">
             Get in Touch
           </h1>
           <p className="text-gray-700 mt-2 text-lg">We'd love to hear from you</p>
@@ -84,42 +84,42 @@ Kuttichira, Kozhikode, 673001
         </section>
 
         {/* Newsletter Subscription Form Section */}
-        <section className="py-12 bg-gray-300">
-          <h2 className="text-2xl font-semibold text-gray-800 text-center mb-8">Stay Informed</h2>
-          <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-gray-700">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full px-4 py-2 text-black border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block text-gray-700">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-4 py-2 text-black border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                placeholder="Your Email"
-                required
-              />
-            </div>
+<section className="py-12 bg-gray-300">
+  <h2 className="text-2xl font-semibold text-gray-800 text-center mb-8">Stay Informed</h2>
+  <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-6">
+    <div className="mx-auto w-96">
+      <label htmlFor="name" className="block text-gray-700 mb-1">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        className="w-full px-4 py-2 text-black border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        placeholder="Your Name"
+        required
+      />
+    </div>
+    
+    <div className="mx-auto w-96">
+      <label htmlFor="email" className="block text-gray-700 mb-1">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        className="w-full px-4 py-2 text-black border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        placeholder="Your Email"
+        required
+      />
+    </div>
 
-            <div className="text-center">
-              <button type="submit" className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-6 rounded-md transition duration-300">
-                Subscribe Now
-              </button>
-            </div>
+    <div className="text-center">
+      <button type="submit" className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-6 rounded-md transition duration-300">
+        Subscribe Now
+      </button>
+    </div>
 
-            {status && <p className="text-center text-gray-600 mt-4">{status}</p>}
-          </form>
-        </section>
+    {status && <p className="text-center text-gray-600 mt-4">{status}</p>}
+  </form>
+</section>
 
         {/* Social Media Section */}
         <section className="py-10 bg-white text-center">

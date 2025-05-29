@@ -16,6 +16,7 @@ export default function Donate() {
 
         {/* Content Section */}
         <section className="max-w-4xl mx-auto px-4 py-10">
+          {/* Banner Image */}
           <div className="rounded-xl overflow-hidden shadow-lg mb-8">
             <img
               src="/ORP3.jpeg"
@@ -24,32 +25,30 @@ export default function Donate() {
             />
           </div>
 
+          {/* UPI QR Code Donation */}
           <div className="text-center">
             <p className="mb-6 text-lg leading-relaxed">
               Your generous donation helps us provide education, healthcare, and hope to underprivileged children. Every contribution, no matter the size, makes a lasting difference. ❤️
             </p>
 
-            <p className="text-md font-medium mb-4">Choose an amount to donate:</p>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-center">
-              {[{ amount: 100 }, { amount: 250 }, { amount: 500 }, { label: 'Other', link: 'https://www.paypal.com/donate?business=mittalisindia@gmail.com&currency_code=INR' }]
-                .map(({ amount, label, link }) => {
-                  const url = link || `https://www.paypal.com/donate?business=mittalisindia@gmail.com&currency_code=INR&amount=${amount}`;
-                  return (
-                    <a
-                      key={label || amount}
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-xl shadow-md transition"
-                    >
-                      {label || `₹${amount}`}
-                    </a>
-                  );
-                })}
+            <div className="mt-12">
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">Donate via UPI QR Code</h2>
+              <div className="flex flex-col items-center">
+                <img
+                  src="/images/qr-code.png"
+                  alt="Donate via UPI QR Code"
+                  className="w-64 h-64 object-contain border border-gray-300 rounded-lg shadow-md"
+                />
+                <p className="mt-4 text-sm text-gray-600">
+                  Scan this QR using any UPI app (Google Pay, PhonePe, Paytm, etc.)
+                </p>
+                <p className="mt-2 text-sm text-gray-700">
+                  UPI ID: <span className="font-semibold">mittalisindia@upi</span>
+                </p>
+              </div>
             </div>
 
-            <p className="mt-8 text-sm text-gray-600">All donations are securely processed via PayPal.</p>
+            <p className="mt-8 text-sm text-gray-600">We appreciate your support.</p>
           </div>
         </section>
       </main>
