@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
+/* Register font CSS variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-barlow: 'Barlow', sans-serif;
+  --font-amaranth: 'Amaranth', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+/* Font utility classes */
+.font-barlow {
+  font-family: var(--font-barlow);
+}
+
+.font-amaranth {
+  font-family: var(--font-amaranth);
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
 }
 
 @theme inline {

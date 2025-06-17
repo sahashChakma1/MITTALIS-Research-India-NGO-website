@@ -38,7 +38,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b shadow-sm" style={{ backgroundColor: '#E9E0E5', borderColor: '#7E5857' }}>
+    <header className="sticky top-0 z-50 border-b shadow-sm" style={{ backgroundColor: '#fcf9f2', borderColor: '#7E5857' }}>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 py-4 flex items-center justify-between">
         {/* Logo + Brand */}
         <div className="flex items-center space-x-3 md:-ml-8">
@@ -50,12 +50,15 @@ const Header = () => {
             className="rounded-md object-cover w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10"
           />
           <Link
-            href="/"
-            className="text-base sm:text-lg md:text-lg font-semibold leading-tight"
-            style={{ color: '#673838' }}
-          >
-            MITTALIS Research India
-          </Link>
+              href="/"
+              className="text-base sm:text-lg md:text-lg font-semibold leading-tight"
+              style={{
+                color: '#673838',
+                fontFamily: 'var(--font-montserrat)',
+              }}
+            >
+              MITTALIS Research India
+            </Link>
         </div>
 
         {/* Desktop Navigation */}

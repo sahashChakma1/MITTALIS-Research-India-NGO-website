@@ -1,206 +1,111 @@
-"use client";
+'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+// Animation Variants
+const sectionTextVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.5, ease: 'easeInOut' } },
+};
 
 export default function AboutUs() {
-  // Animation variants for Hero Section
-  const heroVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100, damping: 20, duration: 1.8 } },
-  };
-
-  const bgImageVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 0.2, transition: { duration: 2, ease: 'easeInOut' } },
-  };
-
-  // Animation variants for Philosophy/Focus Section
-  const gridItemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.4, duration: 1.5, ease: 'easeInOut' },
-    }),
-  };
-
-  // Animation variants for Mission/Vision Sections
-  const sectionTextVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1.5, ease: 'easeInOut' } },
-  };
-
-  // Animation variants for Glimpse Section
-  const glimpseCardVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: (i) => ({
-      opacity: 1,
-      scale: 1,
-      transition: { delay: i * 0.3, duration: 1.2, type: 'spring', stiffness: 120, damping: 15 },
-    }),
-    hover: { scale: 1.03, transition: { type: 'spring', stiffness: 200, damping: 10 } },
-  };
-
-  // Animation variants for Call to Action
-  const ctaVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.3, duration: 1.5, ease: 'easeInOut' },
-    }),
-  };
+  const imageSections = [
+    { src: '/about/BUD1.jpeg', label: 'Remedial classes for children in Budigere, Bengaluru.' },
+    { src: '/home/Tribal_Children.jpg', label: 'A Visit to Tribal Children in Attappadi, Kerala' },
+    { src: '/about/MC6.jpeg', label: 'Medical Camp in Mukkali and Sholayur regions of Attappadi.' },
+    { src: '/home/Orphans.jpeg', label: 'A Visit to Aryan Ashraya Orphanage, Devanahalli, Bengaluru.' },
+    { src: '/about/health.jpeg', label: 'Session on Health &amp; Well-Being at St. Gregorious English Medium School, Attappadi.' },
+    { src: '/about/hegde.jpeg', label: 'Awareness program on cleanliness and hygiene for the children of migrant workers in Hegdenagar, Bengaluru.' },
+    { src: '/about/shala.jpg', label: 'Learning sessions for kids at Modala Shala Ananda Sagara Charitable Trust,Bengaluru.' },
+    { src: '/about/knowing.jpg', label: 'A Knowing India Research Visit to Padmashree Awardee, Lakshmi Amma of Kaani Tribe, Attappadi' }, 
+    { src: '/about/INT6.jpg', label: 'Girls Empowerment Sessions' },       
+  ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Head>
-        <title>About Us - MITTALIS Research India</title>
-        <meta
-          name="description"
-          content="Learn more about MITTALIS Research India and our mission to empower underserved children through education and holistic development."
-        />
-      </Head>
-
+    <div className="min-h-screen flex flex-col bg-white text-gray-900"> 
       <Header />
 
-      <main className="flex-grow bg-white text-gray-900">
-        {/* Hero Section */}
-        <section className="bg-amber-100 py-20 text-center relative overflow-hidden">
-          <motion.div
-            className="max-w-3xl mx-auto z-10 relative px-4"
-            initial="hidden"
-            animate="visible"
-            variants={heroVariants}
-            style={{ willChange: 'transform, opacity' }}
-          >
-            <motion.h1
-              className="text-5xl font-extrabold uppercase tracking-wide text-amber-900 drop-shadow"
-              variants={heroVariants}
-            >
-              Who We Are
-            </motion.h1>
-            <motion.p
-              className="mt-4 text-xl font-medium text-gray-800"
-              variants={heroVariants}
-              transition={{ delay: 0.2 }}
-            >
-              Empowering Dreams. Uplifting Futures.
-            </motion.p>
-            <motion.p
-              className="mt-2 text-lg text-gray-700 leading-relaxed"
-              variants={heroVariants}
-              transition={{ delay: 0.4 }}
-            >
-              At MITTALIS Research India, we believe that every child deserves the opportunity to learn, grow, and thrive.
-            </motion.p>
-          </motion.div>
-          <motion.div
-            className="absolute inset-0 opacity-20 bg-[url('/INT7.jpg')] bg-cover bg-center"
-            variants={bgImageVariants}
-            initial="hidden"
-            animate="visible"
-            style={{ willChange: 'opacity' }}
-          />
-        </section>
+      <main className="flex-grow">
+       {/* Hero Background Section */}
+<section
+  className="relative bg-cover bg-center bg-no-repeat py-32 md:py-15 px-4"
+  style={{ backgroundImage: "url('/about/about_us.jpg')" }}
+>
+  <div className="max-w-3xl md:max-w-4xl mx-auto bg-[#fff7e6]/90 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-lg">
+    <h2 className="text-2xl md:text-3xl font-extrabold font-montserrat text-center text-[#673838] uppercase mb-6 tracking-wide">
+      About Us
+      <div className="mt-2 w-24 h-1 bg-[#673838] mx-auto rounded-full" />
+    </h2>
+    <div className="text-[#3b2f1c] text-base md:text-lg space-y-4 leading-relaxed">
+     <p>
+        <strong>Our Philosophy</strong>–MITTALIS Research India is a purpose-driven organization
+        committed to transforming the lives of underserved children across India through
+        mindful, inclusive, and sustainable interventions. Founded on the principle of
+        Mindful Intervention for Tangible Transformation And Lifelong Impact for
+        Sustainability, we work at the intersection of education, research, and rehabilitation
+        to create meaningful and lasting impact. With a deep-rooted belief in the potential
+        of every child, our efforts are centered on empowering young minds to dream big,
+        rise above their circumstances, and build a brighter future.
+      </p>
+      <p>
+        <strong>Our Focus</strong> –Our work is anchored in three interconnected pillars—Education,
+        Upskilling, and Research. We believe that access to quality learning, life skills, and
+        creative expression is essential for children to grow into confident and capable
+        individuals. That’s why we strive to ensure that every child receives the resources
+        and support they need to flourish. Recognizing that a child’s well-being is closely tied
+        to the stability and health of their family, we also extend our support to families in
+        crisis. Through this integrated approach, we aim to build a nurturing ecosystem
+        where every child has a fair and sustained opportunity to thrive.
+      </p>
+      <p>
+        <strong>Our Commitment to Research</strong> – Through <em>Knowing India</em>, the flagship research
+        initiative of MITTALIS, we seek to unearth and document India’s traditional
+        knowledge systems while exploring the challenges faced by marginalized
+        communities. By offering sustainable solutions rooted in cultural understanding, this
+        initiative bridges heritage and progress. Our work is grounded in the principles of
+        sustainable development and cultural preservation, ensuring that every intervention
+        contributes to a future that is equitable, inclusive, and enduring.
+      </p>
+      <p>
+        <strong>Our Reach</strong> –At MITTALIS, we believe that true change goes beyond temporary
+        assistance. With current initiatives in Kerala and Bengaluru, MITTALIS Research India
+        continues to evolve as a community-rooted organization driven by compassion and
+        commitment. Through every step, we remain focused on our core mission—to
+        educate, engage, and enrich the lives of children, nurturing a generation that carries
+        forward both knowledge and hope.
+      </p>
 
-        {/* Philosophy and Focus Section */}
-        <section className="bg-amber-50 py-20">
-  <div className="container mx-auto px-6 max-w-6xl">
-    <div className="grid md:grid-cols-2 gap-12 text-lg text-gray-900 leading-relaxed">
-      {[
-        {
-          title: 'Our Philosophy',
-          content: [
-            'MITTALIS stands for <strong>Mindful Intervention for Tangible Transformation and Lifelong Impact for Sustainability</strong>. Our initiatives are rooted in the belief that true change comes from sustained, thoughtful engagement.',
-            'We don’t just offer aid—we work to restore dignity and opportunity to children from marginalized communities across India.',
-          ],
-        },
-        {
-          title: 'Our Focus',
-          content: [
-            'Operating at the intersection of <strong>education, research, and rehabilitation</strong>, we serve children from tribal backgrounds, migrant families, orphanages, and rural settlements.',
-            'From early learning to life skills and mental wellness, our holistic approach empowers children to thrive and lead with confidence.',
-          ],
-        },
-        {
-          title: 'Cultural Connection',
-          content: [
-            'Through our <em><strong>Knowing India</strong></em> initiative, we celebrate and safeguard indigenous knowledge systems while addressing modern social challenges with cultural sensitivity.',
-            'We believe identity is power—and every child deserves to see their heritage valued and upheld.',
-          ],
-        },
-        {
-          title: 'Where We Work',
-          content: [
-            'Our on-ground programs currently operate in <strong>Kerala</strong> and <strong>Bengaluru</strong>, led by a growing network of educators, researchers, and volunteers dedicated to uplifting communities.',
-            'We’re building a future that is inclusive, resilient, and rooted in hope.',
-          ],
-        },
-      ].map(({ title, content }, index) => (
-        <motion.div
-          key={title}
-          variants={gridItemVariants}
-          initial="hidden"
-          animate="visible" // Immediate animation
-          custom={index}
-          style={{ willChange: 'transform, opacity' }}
-        >
-          <h3 className="text-2xl font-semibold text-amber-600 mb-4">{title}</h3>
-          {content.map((paragraph, idx) => (
-            <p key={idx} className="mt-4" dangerouslySetInnerHTML={{ __html: paragraph }} />
-          ))}
-        </motion.div>
-      ))}
     </div>
-
-    <motion.div
-      className="mt-16 text-center"
-      initial="hidden"
-      animate="visible" // Immediate animation
-      variants={sectionTextVariants}
-      style={{ willChange: 'transform, opacity' }}
-    >
-      <p className="text-xl font-semibold text-gray-900">
-        Join us in our mission to <span className="text-amber-600">Educate, Engage, and Enrich</span>.
-      </p>
-      <p className="mt-2 text-gray-700">
-        Your support can help shape a generation of changemakers.
-      </p>
-    </motion.div>
   </div>
 </section>
 
         {/* Mission Section */}
-<Section title="Our Mission" bg="bg-amber-100">
-  <motion.div
-    className="max-w-4xl mx-auto text-center"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    variants={sectionTextVariants}
-    style={{ willChange: 'transform, opacity' }}
-  >
-    <img
-      src="/logo/logo.jpg" // Replace with your actual logo path
-      alt="MITTALIS Logo"
-      className="mx-auto w-24 h-24 mb-6"
-    />
-    <p className="text-2xl font-semibold text-amber-900 mb-4">
-      Educate. Engage. Enrich.
-    </p>
-    <p className="text-lg text-gray-700 leading-relaxed">
-      At MITTALIS Research India, our mission is to empower children from underserved communities through
-      access to quality education, emotional well-being, and cultural dignity. We strive to create safe
-      learning spaces, foster curiosity, and build a foundation for lifelong growth.
-    </p>
-  </motion.div>
-</Section>
-
+        <Section title="Our Mission" bg="bg-amber-100">
+          <motion.div
+            className="max-w-4xl mx-auto text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={sectionTextVariants}
+          >
+            <img
+              src="/logo/logo.jpg"
+              alt="MITTALIS Logo"
+              className="mx-auto w-24 h-24 mb-6 rounded-full shadow-md"
+              loading="lazy"
+            />
+            <p className="text-2xl font-semibold text-amber-900 mb-4">Educate. Engage. Enrich.</p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              At MITTALIS Research India, our mission is to empower children from underserved communities through
+              access to quality education, emotional well-being, and cultural dignity.
+            </p>
+          </motion.div>
+        </Section>
 
         {/* Vision Section */}
         <Section title="Our Vision" bg="bg-white">
@@ -210,112 +115,61 @@ export default function AboutUs() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={sectionTextVariants}
-            style={{ willChange: 'transform, opacity' }}
           >
-            <p className="text-2xl font-semibold text-amber-900 mb-4">
-              A Future Rooted in Compassion and Possibility
-            </p>
+            <p className="text-2xl font-semibold text-amber-900 mb-4">A Future Rooted in Compassion and Possibility</p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              To foster the holistic development of children from marginalized communities through
+              To foster holistic development through
               <span className="font-medium text-amber-600"> education</span>,
               <span className="font-medium text-amber-600"> skill-building</span>,
               <span className="font-medium text-amber-600"> environmental awareness</span>,
-              <span className="font-medium text-amber-600"> cultural preservation</span>,
-              and <span className="font-medium text-amber-600">research</span>.
+              <span className="font-medium text-amber-600"> cultural preservation</span>, and
+              <span className="font-medium text-amber-600"> research</span>.
             </p>
           </motion.div>
         </Section>
 
-        {/* Glimpse Section */}
-        <Section title="A Glimpse into MITTALIS 2024–25" bg="bg-amber-50">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
-              {[
-                {
-                  src: '/about/MIG4.jpeg',
-                  alt: 'Cleanliness and hygiene awareness for children of migrant workers in Hegdenagar, Bengaluru.',
-                },
-                {
-                  src: '/about/BUD4.jpeg',
-                  alt: 'Remedial classes for children in Budigere, Bengaluru.',
-                },
-                {
-                  src: '/about/GEMS4.jpeg',
-                  alt: 'Well-being session by Ayurveda doctors at St. Gregorious English Medium School, Attappadi.',
-                },
-                {
-                  src: '/about/INT6.jpg',
-                  alt: 'MA English students at Kristu Jayanti College conducting sessions for children in Bengaluru.',
-                },
-                {
-                  src: '/about/MC6.jpeg',
-                  alt: 'Medical Camp in Mukkali and Sholayur regions of Attappadi.',
-                },
-              ].map(({ src, alt }, index) => (
-                <motion.div
-                  key={index}
-                  className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-transform bg-white"
-                  variants={glimpseCardVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  custom={index}
-                  whileHover="hover"
-                  style={{ willChange: 'transform, opacity' }}
-                >
-                  <img
-                    src={src}
-                    alt={alt}
-                    className="w-full h-60 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="p-4">
-                    <p className="text-sm font-semibold text-gray-700 text-center">{alt}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-        </Section>
+        {/* Interventions Glimpse Title */}
+        <section className="bg-[#8B5E3C] py-10 text-center">
+          <h2 className="text-white text-3xl md:text-4xl font-montserrat font-bold  uppercase">
+            A Glimpse into Our Interventions
+          </h2>
+        </section>
 
-        {/* Call to Action Section */}
-        <Section title="Join Our Cause" bg="bg-amber-100">
-          <motion.div
-            className="text-center max-w-2xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={ctaVariants}
-            style={{ willChange: 'transform, opacity' }}
-          >
-            <motion.p
-              className="text-lg mb-6 text-gray-700"
-              variants={ctaVariants}
-              custom={0}
-            >
-              Help us make a difference in the lives of underserved children across India. Your support can
-              transform lives through education and holistic development.
-            </motion.p>
-            <motion.div
-              className="flex flex-col md:flex-row justify-center gap-4"
-              variants={ctaVariants}
-              custom={1}
-            >
-              <Link
-                href="/get-involved"
-                className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition"
+        {/* Image Grid Section */}
+        <section className="bg-white py-12 px-4">
+          <div className="flex flex-wrap -mx-2">
+            {imageSections.map((item, index) => (
+              <motion.div
+                key={index}
+                className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={index}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: (i) => ({
+                    opacity: 1,
+                    y: 0,
+                    transition: { delay: i * 0.2, duration: 1.2 },
+                  }),
+                }}
               >
-                Volunteer With Us
-              </Link>
-              <Link
-                href="/contact"
-                className="bg-amber-800 hover:bg-amber-900 text-white font-bold py-3 px-6 rounded-lg transition"
-              >
-                Contact Us
-              </Link>
-            </motion.div>
-          </motion.div>
-        </Section>
+                <div className="relative rounded-lg shadow-md overflow-hidden group">
+                 <img
+                    src={item.src}
+                    alt={item.label}
+                    className="w-full h-80 md:h-[22rem] object-cover opacity-90 group-hover:opacity-100 transition duration-300"
+                  />
+
+                  <div className="absolute bottom-0 w-full bg-black/60 text-white text-sm md:text-base font-medium p-2 text-center">
+                    {item.label}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <Footer />
@@ -329,12 +183,11 @@ function Section({ title, bg, children }) {
     <section className={`${bg} py-16 px-4`}>
       <div className="container mx-auto">
         <motion.h2
-          className="text-3xl font-bold text-center text-amber-900 mb-8 uppercase"
+          className="text-3xl font-amaranth font-bold text-center text-amber-900 mb-8 uppercase"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: 'easeInOut' }}
-          style={{ willChange: 'transform, opacity' }}
         >
           {title}
         </motion.h2>

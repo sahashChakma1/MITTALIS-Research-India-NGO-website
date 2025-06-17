@@ -36,7 +36,7 @@ export default function GetInTouch() {
       <main className="bg-white min-h-screen">
         {/* Hero Section */}
         <section className="bg-amber-50 text-center py-10">
-          <h1 className="text-amber-900 text-4xl font-extrabold uppercase tracking-wide">Get in Touch</h1>
+          <h1 className="text-amber-900 text-4xl font-montserrat font-bold uppercase tracking-wide">Get in Touch</h1>
           <p className="text-gray-700 mt-2 text-lg">We'd love to hear from you</p>
         </section>
 
@@ -64,7 +64,33 @@ export default function GetInTouch() {
             </div>
           </div>
         </section>
+       
+        {/* Google Map Section */}
+<section className="bg-white py-12 px-4"> 
+  <div className="max-w-5xl mx-auto rounded-xl overflow-hidden shadow-lg">
+    <iframe
+      title="MITTALIS Location - Kozhikode"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.4395179033314!2d75.77517957426749!3d11.244703850914222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65e5ecf3f73df%3A0x3e76fdfe75d81061!2sKoyappathody%20Building%2C%20Beach%20Rd%2C%20Kuttichira%2C%20Kozhikode%2C%20Kerala%20673001!5e0!3m2!1sen!2sin!4v1718637274379!5m2!1sen!2sin"
+      width="100%"
+      height="400"
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="w-full h-[400px] border-none"
+    ></iframe>
+  </div>
 
+  <div className="text-center mt-6">
+    <a
+      href="https://www.google.com/maps/dir/?api=1&destination=Koyappathody+Building,+Beach+Road,+Kuttichira,+Kozhikode,+Kerala+673001"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-[#673838] hover:bg-[#4e2a2a] text-white font-semibold py-2 px-6 rounded-full shadow-md transition duration-300"
+    >
+      Get Directions
+    </a>
+  </div>
+</section>
         {/* Newsletter Section */}
         <section className="bg-white text-center py-8 sm:py-10 px-4">
           <h1
@@ -169,7 +195,7 @@ export default function GetInTouch() {
 </section>
         {/* Social Media */}
         <section className="py-10 bg-amber-50 text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Connect with us</h2>
+          <h2 className="text-2xl font-montserrat font-bold text-gray-800 mb-4">Connect with us</h2>
           <div className="flex justify-center space-x-6">
             <a href="https://www.linkedin.com/company/mittalis-re-search-india/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 transition transform hover:scale-110">
               <FaLinkedin size={30} />
