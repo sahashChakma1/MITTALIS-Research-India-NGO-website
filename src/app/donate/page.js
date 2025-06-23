@@ -1,5 +1,7 @@
 'use client';
+
 import { motion } from 'framer-motion';
+import Image from 'next/image'; // ✅ Added import for Next.js Image component
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -55,13 +57,50 @@ export default function Donate() {
             viewport={{ once: true }}
             className="rounded-xl overflow-hidden shadow-lg mb-10"
           >
-            <img
+            <Image
               src="/ORP3.jpeg"
               alt="Children in need"
+              width={1200}
+              height={400}
               className="w-full h-64 object-cover"
             />
           </motion.div>
-       
+
+          {/* QR Code Section */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+            className="bg-amber-50 border border-amber-200 shadow-lg rounded-xl p-8 md:p-10 mt-12"
+          >
+            <motion.h2
+              variants={childVariants}
+              className="text-2xl font-amaranth font-bold text-center text-amber-900 mb-6"
+            >
+              Donate Instantly via UPI
+            </motion.h2>
+
+            <motion.div
+              variants={childVariants}
+              className="flex flex-col items-center justify-center space-y-4"
+            >
+              <Image
+                src="/QR.png" // ✅ Replace with actual QR image (PNG, JPG, etc.)
+                alt="UPI QR Code"
+                width={240}
+                height={240}
+                className="border border-gray-300 rounded-md shadow"
+              />
+              <p className="text-gray-800 text-lg font-semibold">
+                UPI ID: <span className="text-amber-800">mittalisresearchindia@sbi</span>
+              </p>
+              <p className="text-sm text-gray-600 text-center max-w-md">
+                Scan the QR code above using any UPI app (Paytm, PhonePe, GPay, BHIM, etc.) to donate instantly.
+              </p>
+            </motion.div>
+          </motion.div>
+
           {/* Bank Details Section */}
           <motion.div
             initial="hidden"
