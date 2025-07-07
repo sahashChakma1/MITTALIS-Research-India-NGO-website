@@ -23,7 +23,7 @@ export default function AboutUs() {
     { src: '/about/hegde.jpeg', label: 'Awareness program on cleanliness and hygiene for the children of migrant workers in Hegdenagar, Bengaluru.' },
     { src: '/about/shala.jpg', label: 'Learning sessions for kids at Modala Shala Ananda Sagara Charitable Trust,Bengaluru.' },
     { src: '/about/knowing.jpg', label: 'A Knowing India Research Visit to Padmashree Awardee, Lakshmi Amma of Kaani Tribe, Attappadi' }, 
-    { src: '/about/INT6.jpg', label: 'Girls Empowerment Sessions' },       
+         
   ];
 
   return (
@@ -85,27 +85,28 @@ export default function AboutUs() {
 </section>
 
         {/* Mission Section */}
-        <Section title="Our Mission" bg="bg-amber-100">
-          <motion.div
-            className="max-w-4xl mx-auto text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={sectionTextVariants}
-          >
-            <img
-              src="/logo/logo.jpg"
-              alt="MITTALIS Logo"
-              className="mx-auto w-24 h-24 mb-6 rounded-full shadow-md"
-              loading="lazy"
-            />
-            <p className="text-2xl font-semibold text-amber-900 mb-4">Educate. Engage. Enrich.</p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              At MITTALIS Research India, our mission is to empower children from underserved communities through
-              access to quality education, emotional well-being, and cultural dignity.
-            </p>
-          </motion.div>
-        </Section>
+  <Section title="Our Mission" bg="bg-[#673838]">
+  <motion.div
+    className="max-w-4xl mx-auto text-center"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={sectionTextVariants}
+  >
+    <img
+      src="/logo/logo.jpg"
+      alt="MITTALIS Logo"
+      className="mx-auto w-24 h-24 mb-6 rounded-full shadow-md"
+      loading="lazy"
+    />
+    <p className="text-2xl font-semibold text-white mb-4 tracking-wide">Educate. Engage. Enrich.</p>
+    <p className="text-lg text-white/90 leading-relaxed">
+      At MITTALIS Research India, our mission is to empower children from underserved communities through
+      access to quality education, emotional well-being, and cultural dignity.
+    </p>
+  </motion.div>
+</Section>
+
 
         {/* Vision Section */}
         <Section title="Our Vision" bg="bg-white">

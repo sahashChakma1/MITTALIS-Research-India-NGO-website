@@ -104,18 +104,21 @@ export default function Home() {
   Educate, Engage, <span className="ml-40">Enrich</span>
 </motion.h1>
   {/* Quote */}
+  <div className="flex justify-center">
   <motion.div
-    className="bg-[#f4f1ed] p-8 md:p-10 rounded-3xl shadow-inner"
+    className="bg-[#f4f1ed] p-10 md:p-14 rounded-3xl shadow-inner text-center"
     variants={quoteVariants}
     initial="hidden"
     animate="visible"
   >
-    <p className="text-xl md:text-2xl text-[#4a3400] font-medium leading-relaxed tracking-wide">
+    <p className="text-2xl md:text-3xl text-[#4a3400] font-semibold leading-relaxed tracking-wide">
       Every Child holds a Dream<br />
       Every Dream needs a Chance<br />
       Every Chance changes Tomorrow
     </p>
   </motion.div>
+</div>
+
 </div>
   </div>
 </section>
